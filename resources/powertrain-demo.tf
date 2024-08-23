@@ -25,3 +25,21 @@ data "aws_iam_policy_document" "default" {
     }
   }
 }
+
+resource "aws_iam_role_policy" "s3_access" {
+  name   = "s3_access"
+  policy = data.aws_iam_policy_document.acess_to_s3.json
+  role   = aws_iam_role.default.name
+}
+
+data "aws_iam_policy_document" "acess_to_s3" {
+  statement {
+    actions   = ["s3:*"]
+    effect    = "Allow"
+    resources = ["arn:aws:s3:::conveyor-powertrain-data/*"]
+  }
+}
+
+
+
+

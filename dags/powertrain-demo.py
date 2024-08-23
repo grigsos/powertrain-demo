@@ -24,10 +24,7 @@ ConveyorContainerOperatorV2(
     cmds=["python"],
     arguments=[
         "-m",
-        "powertraindemo.sample",
-        "--date", "{{ ds }}",
-        "--env",
-        "{{ macros.conveyor.env() }}",
+        "powertraindemo.sample"
     ],
     instance_type="mx.micro",
     aws_role="powertrain-demo-{{ macros.conveyor.env() }}",

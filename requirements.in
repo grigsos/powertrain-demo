@@ -1,2 +1,5 @@
-requests
+scipy
+numpy
+pandas
+matplotlib
 boto3

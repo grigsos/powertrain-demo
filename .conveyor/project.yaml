@@ -1,0 +1,15 @@
+docker:
+    path: .
+id: 131c3028-66a5-487f-9cac-17e4edc61b60
+ide:
+    filename: ide.yaml
+name: powertrain-demo
+resources:
+    path: resources
+streaming:
+    filename: streaming.yaml
+template: project/python
+version: "0.3"
+workflows:
+    path: dags
+    version: "2"
